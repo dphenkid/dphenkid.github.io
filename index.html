@@ -6,17 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Tu</title>
     <style>
-        #box1{
-            width:auto;
-            height:auto;
-            background: rgb(113, 175, 164);
+        #box1{  
+            background-color: rgb(113, 175, 164);
             text-align: center;
             text-shadow: 20px;
             
         }
         #box{
-            width: 500px;
-            height: 300px;
+            width: 300px;
+            height: 200px;
             background: rgb(204, 212, 169);
             border: 2px solid black;
             margin: auto;
@@ -25,7 +23,7 @@
         #box2{
             width: 0px;
             height: 0px;
-            border: 250px solid black;
+            border: 150px solid black;
             border-color: rgb(158, 157, 131) transparent transparent transparent;
             border-radius: 20px/20px;
             float: left;
@@ -33,20 +31,31 @@
         #box3{
             width: 0px;
             height: 0px;
-            margin-left: 220px;
-            margin-top: 215px;
-            border: 30px solid rgb(54, 66, 74);
+            margin-left: 135px;
+            margin-top: 125px;
+            border: 15px solid rgb(54, 66, 74);
             border-radius: 100px/100px;
             position: absolute;
         }
     </style>
 </head>
 <body>
-    <div id="box1">  A letter to Tu...   
+    <div id="box1">  A letter to Tu...
         <div id="box">
             <div id="box2"></div>
             <div id="box3"></div>
         </div>
+        SinETopia Presents.
     </div>
+    <script type="text/javascript">
+        var bDiv = document.getElementById('box3');
+        bDiv.onclick = function() {
+            var ba1 = document.getElemenById('box2');
+            var w = parseInt(div.style.width);
+            var h = parseInt(div.style.height);
+            div.style.width = (w + 30) + "px";
+            div.style.height = (h + 50) + "px";
+        }
+    </script>
 </body>
 </html>
