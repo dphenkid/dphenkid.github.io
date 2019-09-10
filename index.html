@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Tu</title>
     <style>
+        .header{
+            position: relative;
+            text-align: center;
+        }
         #box1{  
             background-color: rgb(113, 175, 164);
             text-align: center;
             text-shadow: 20px;
+            height: 650px;
+            width: auto;
+            position: relative;
             
         }
         #box{
@@ -19,11 +26,13 @@
             border: 2px solid black;
             margin: auto;
             border-radius: 20px/20px;
+            position: relative;
+            top: 20%;
         }
         #box2{
             width: 0px;
             height: 0px;
-            border: 150px solid black;
+            border: 150px solid;
             border-color: rgb(158, 157, 131) transparent transparent transparent;
             border-radius: 20px/20px;
             float: left;
@@ -37,24 +46,28 @@
             border-radius: 100px/100px;
             position: absolute;
         }
+        .footer{
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div id="box1">  A letter to Tu...
+    <div class="header">A letter to Tu...</div>
+    <div id="box1">  
         <div id="box">
             <div id="box2"></div>
             <div id="box3"></div>
         </div>
-        SinETopia Presents.
     </div>
+    <div class="footer">@SinETopia Presents.</div>
     <script type="text/javascript">
         var bDiv = document.getElementById('box3');
         bDiv.onclick = function() {
-            var ba1 = document.getElemenById('box2');
-            var w = parseInt(div.style.width);
-            var h = parseInt(div.style.height);
-            div.style.width = (w + 30) + "px";
-            div.style.height = (h + 50) + "px";
+            document.getElementById('box2').style.display = "none";
+            document.getElementById('box3').style.display = "none";
         }
     </script>
 </body>
