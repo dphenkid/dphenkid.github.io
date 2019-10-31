@@ -42,7 +42,7 @@
             height: 0px;
             margin-left: 135px;
             margin-top: 125px;
-            border: 15px solid rgb(54, 66, 74);
+            border: 15px solid;
             border-radius: 100px/100px;
             position: absolute;
         }
@@ -69,6 +69,17 @@
             document.getElementById('box2').style.display = "none";
             document.getElementById('box3').style.display = "none";
         }
+        //ccc
+        var cc = document.getElementById("box1");
+        function ccc() {
+            var a = parseInt(Math.random()*10);
+            var b = parseInt(Math.random()*10);
+            var c = parseInt(Math.random()*10);
+            var d = "#" + a + b + c;
+            box1.style.background = d;
+        }
+
+        setInterval("ccc()", 2000);
     </script>
 </body>
 </html>
