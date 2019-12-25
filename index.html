@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To Tu</title>
+    <title>❆Merry Christmas to Josefa❆</title>
     <style>
         .header{
             position: relative;
@@ -14,7 +14,7 @@
             background-color: rgb(113, 175, 164);
             text-align: center;
             text-shadow: 20px;
-            height: 650px;
+            height: 550px;
             width: auto;
             position: relative;
             
@@ -59,13 +59,16 @@
     <div id="box1">  
         <div id="box">
             <div id="box2"></div>
-            <div id="box3"></div>
+            <div id="box3">
+                <img id="pic1" src="imgs/pic1.jpg" style="display: none">
+            </div>
         </div>
     </div>
     <div class="footer">@SinETopia Presents.</div>
     <script type="text/javascript">
         var bDiv = document.getElementById('box3');
         bDiv.onclick = function() {
+            document.getElementById('pic1').style.display = "block";
             document.getElementById('box2').style.display = "none";
             document.getElementById('box3').style.display = "none";
         }
@@ -78,80 +81,77 @@
             var d = "#" + a + b + c;
             box1.style.background = d;
         }
-
         setInterval("ccc()", 2000);
         
         //snowfall
-         //增加div
+         //add div
         function addChild(top,snowShape) {
-        var div = document.createElement("div");
-        div.innerHTML = snowShape;
-        div.className = "flake";
-        div.style.position = 'absolute';
-        div.style.color = 'white';
-        div.style.opacity = 0.9;
-        div.style.left = parseInt(Math.random() * window.innerWidth) + 'px';
-        div.style.top = top + 'px';
-        div.style.fontSize = parseInt(Math.random() * 50) + 'px';
-        document.body.appendChild(div);
+            var div = document.createElement("div");
+            div.innerHTML = snowShape;
+            div.className = "flake";
+            div.style.position = 'absolute';
+            div.style.color = 'white';
+            div.style.opacity = 0.9;
+            div.style.left = parseInt(Math.random() * window.innerWidth) + 'px';
+            div.style.top = top + 'px';
+            div.style.fontSize = parseInt(Math.random() * 50) + 'px';
+            document.body.appendChild(div);
         };
-        //雪花自动降落
+        //snow fall auto
         function autoWipe(snowSpeed,snowShape) {
             var flake = document.getElementsByClassName('flake');
             var timer = setInterval(function () {
                 for (var i = 0; i < flake.length; i++) {
                     var opacity = flake[i].style.opacity;
-                    var offsetTop = Number((flake[i].style.top).replace('px',''));
+                    var offsetTop = Number((flake[i].style.top).replace('px', ''));
                     if (offsetTop < window.innerHeight) {
-                    offsetTop = offsetTop + snowSpeed;
-                    opacity = opacity - 0.003;
-                    flake[i].style.top = offsetTop + 'px';
-                    flake[i].style.opacity = opacity;
-                    } 
-                    else {
+                        offsetTop = offsetTop + snowSpeed;
+                        opacity = opacity - 0.003;
+                        flake[i].style.top = offsetTop + 'px';
+                        flake[i].style.opacity = opacity;
+                    }else {
                     document.body.removeChild(flake[i]);
-                    addChild(0,snowShape);
+                    addChild(0, snowShape);
                     }
                 }
             }, 100);
         };
-        //调用以上方法
-        function final(bigSnowParam,snowShape) {
-            for (var i = 0; i < bigSnowParam.snowNum; i++) {
-            addChild(parseInt(Math.random() * window.innerHeight),snowShape);
-            }
-            autoWipe(bigSnowParam.snowSpeed,snowShape);
-            };
-        //形成最后效果
+        //call above ways
         function final(bigSnowParam,snowShape) {
             for (var i = 0; i < bigSnowParam.snowNum; i++) {
                 addChild(parseInt(Math.random() * window.innerHeight),snowShape);
             }
             autoWipe(bigSnowParam.snowSpeed,snowShape);
         };
-        //参数值
-
-        //大雪参考值
+        //the last effect
+        function final(bigSnowParam,snowShape) {
+            for (var i = 0; i < bigSnowParam.snowNum; i++) {
+                addChild(parseInt(Math.random() * window.innerHeight),snowShape);
+            }
+            autoWipe(bigSnowParam.snowSpeed,snowShape);
+        };
+        //parameter value
+        //big snow pv
         var bigSnowParam = {
             snowNum:242,
             snowSpeed:6
         };
-        //中雪参考值
+        //mid snow pv
         var midSnowParam = {
             snowNum:242,
             snowSpeed:3
         };
-        //小雪参考值
+        //a little pv
         var littleSnowParam = {
             snowNum:242,
             snowSpeed:1
         };
-        //自定义雪参考值
+        //customize pv
         var selfSnowParam = {
-            snowNum:'',//值为number
-            snowSpeed:''//值为number
+            snowNum:'',//value is number
+            snowSpeed:''//value is number
         };
-        //雪花形状参考
+        //shape pv
         var snowShapeObj = {
             1:'❆',
             2:'❄',
@@ -165,7 +165,7 @@
             10:'✥',
             11:'✺'
         };
-        //调用
+        //call
         final(bigSnowParam,snowShapeObj[1]);
     </script>
 </body>
