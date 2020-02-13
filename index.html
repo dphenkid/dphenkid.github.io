@@ -59,7 +59,7 @@
         .sphone{
             width: 356px;
             height: 679px;
-            background: url(imges/sphone1.png) no-repeat;
+            background: url(images/sphone1.png) no-repeat;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -176,11 +176,11 @@
         <div class="sphone">
             <ul class="list">
                 <li class="right"></li>
-                <li class="left"><img src="imges/vi.jpg" alt=""><p>Hey Josefa</p></li>
-                <li class="left"><img src="imges/vi.jpg" alt=""><p>Happy Valentine's Day!</p></li>
+                <li class="left"><img src="images/vi.jpg" alt=""><p>Hey Josefa</p></li>
+                <li class="left"><img src="images/vi.jpg" alt=""><p>Happy Valentine's Day!</p></li>
             </ul>
             <div class="nav">
-                <img id="icon" src="imges/jo.jpg" alt="">
+                <img id="icon" src="images/jo.jpg" alt="">
                 <input type="text" id="info">
                 <button id="btn">发送</button>
             </div>
@@ -314,9 +314,9 @@
         }; 
         icon.onclick = function(){
             if(iswho){
-            icon.src = "imges/vi.jpg";
+            icon.src = "images/vi.jpg";
             }else{
-            icon.src = "imges/jo.jpg";
+            icon.src = "images/jo.jpg";
             }
             iswho = !iswho;
         };
@@ -326,9 +326,9 @@
                 alert("不许发空格！");
             } else {
                 if(iswho){
-                    list.innerHTML += '<li class="right"><img src="imges/jo.jpg" alt=""><p>' + val + '</p></li>'; 
+                    list.innerHTML += '<li class="right"><img src="images/jo.jpg" alt=""><p>' + val + '</p></li>'; 
                 } else {
-                    list.innerHTML += '<li class="left"><img src="imges/vi.jpg" alt=""><p>' + val + '</p></li>';
+                    list.innerHTML += '<li class="left"><img src="images/vi.jpg" alt=""><p>' + val + '</p></li>';
                 }
             }
         };
