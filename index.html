@@ -11,13 +11,12 @@
             text-align: center;
         }
         #box1{  
-            background-color: rgb(113, 175, 164);
+            /* background-color: rgb(113, 175, 164); */
             text-align: center;
             text-shadow: 20px;
-            height: 550px;
+            height: 680px;
             width: auto;
             position: relative;
-            
         }
         #box{
             width: 300px;
@@ -60,7 +59,7 @@
         .sphone{
             width: 356px;
             height: 679px;
-            background: url(imges/sphone1.jpg) no-repeat;
+            background: url(imges/sphone1.png) no-repeat;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -160,16 +159,17 @@
         }
     </style>
 </head>
-<body>
+<body id="body">
     <div class="wrap">
         <div class="header">Open it, be quick!</div>
         <div id="box1">  
+            <!-- <div id="br1" style="height: 200px;"></div> -->
             <div id="box">
                 <div id="pap">tap</div>
                 <div id="box2"></div>
-                <div id="box3">
-                </div>
+                <div id="box3"></div>
             </div>
+            <!-- <div id="br2" style="height: 350px;"></div> -->
         </div>
 
         
@@ -197,13 +197,13 @@
             document.getElementById('pap').style.display = "block";
         }
         //ccc
-        var cc = document.getElementById("box1");
+        var cc = document.getElementById("body");
         function ccc() {
             var a = parseInt(Math.random()*10);
             var b = parseInt(Math.random()*10);
             var c = parseInt(Math.random()*10);
             var d = "#" + a + b + c;
-            box1.style.background = d;
+            body.style.background = d;
         }
         setInterval("ccc()", 2000);
         
@@ -301,11 +301,16 @@
         var sphone = document.querySelector('.sphone');
         var disp = document.querySelector("#pap");
         var footer = document.querySelector(".footer");
+        var box = document.querySelector("#box");
+        var br2 = document.querySelector("#br2");
 
 
         disp.onclick = function(){
             sphone.style.display = 'block';
             footer.style.display = 'none';
+            box.style.display = 'none';
+            disp.style.display = 'none';
+            br2.style.height = '650px';
         }; 
         icon.onclick = function(){
             if(iswho){
