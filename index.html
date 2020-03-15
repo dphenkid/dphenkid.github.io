@@ -1,337 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Happy Valentine's Day!</title>
-    <style>
-        .header{
-            position: relative;
-            text-align: center;
-        }
-        #box1{  
-            /* background-color: rgb(113, 175, 164); */
-            text-align: center;
-            text-shadow: 20px;
-            height: 680px;
-            width: auto;
-            position: relative;
-        }
-        #box{
-            width: 300px;
-            height: 200px;
-            background: rgb(204, 212, 169);
-            border: 2px solid black;
-            margin: auto;
-            border-radius: 20px/20px;
-            position: relative;
-            top: 20%;
-        }
-        #pap{
-            display: none;
-            margin-top: 50px;
-        }
-        #box2{
-            width: 0px;
-            height: 0px;
-            border: 150px solid;
-            border-color: rgb(158, 157, 131) transparent transparent transparent;
-            border-radius: 20px/20px;
-            float: left;
-        }
-        #box3{
-            width: 0px;
-            height: 0px;
-            margin-left: 135px;
-            margin-top: 125px;
-            border: 15px solid;
-            border-radius: 100px/100px;
-            position: absolute;
-        }
-        .footer{
-            position: absolute;
-            width: 100%;
-            height: 10px;
-            text-align: center;
-        }
-    
-        .sphone{
-            width: 356px;
-            height: 679px;
-            background: url(images/sphone1.png) no-repeat;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -178px;
-            margin-top: -338.5px;
-            display: none;
-        }
-        .list{
-            width: 318px;
-            height: 498px;
-            margin: 47px 0 0 19px;
-            padding: 20px;
-            overflow: auto;
-            box-sizing: border-box;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>cube</title>
+<link rel="stylesheet" type="text/css" href="styles/cube.css">
+<link rel="stylesheet" type="text/css" href="styles/doodle2.css">
+<link rel="stylesheet" type="text/css" href="styles/certificate2.css">
 
-        }
-        .list li::after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        .list img{
-            width: 35px;
-            height: 40px;
-        }
-        .list p{
-            box-sizing: border-box;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .nav{
-            height: 60px;
-            background: #e5e5e5;
-            width: 318px;
-            margin-left:19px; 
-        }
-        .nav::after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        .nav img{
-            padding: 10px 0 0 16px;
-            float: left;
-        }
-        .nav input{
-            float: left;
-            width: 190px;
-            height: 40px;
-            border: none;
-            background: #fff;
-            border-radius: 10px;
-            margin: 11px 0 0 13px;
-        }
-        .nav button{
-            width: 64px;
-            height: 40px;
-            font: 16px / 40px "微软雅黑";
-            color: #e15671;
-            margin-top: 11px;
-            text-align: center;
-            border: none;
-            background: none;
-            margin-left: -5px;
-        }
-        .right,.left{
-            margin-bottom: 20px;
-        }
-        .right img{
-            float: right;
-        }
-        .right p{
-            float: right;
-            background: #bab3ce;
-            color: #fff;
-            margin-right: 13px;
-            word-break: break-all;
-        }
-        .left img{
-            float: left;
-        }
-        .left p{
-            float: left;
-            background: #e5e5e5;
-            margin-left: 13px;
-            word-break: break-all;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        ul{
-            list-style: none;
-        }
-        img{
-            vertical-align: top;
-        }
-    </style>
+<!-- compiled & minified cube code -->
+<script charset="utf-8" src="scripts/tween.r12.js"></script>
+<script charset="utf-8" src="scripts/three.js"></script>
+<script charset="utf-8" src="scripts/cuber.min.js"></script>
+
 </head>
-<body id="body">
-    <div class="wrap">
-        <div class="header">Josefa女神节日快乐:)</div>
-        <div id="box1">  
-            <!-- <div id="br1" style="height: 200px;"></div> -->
-            <div id="box">
-                <div id="pap">tap</div>
-                <div id="box2"></div>
-                <div id="box3"></div>
-            </div>
-            <!-- <div id="br2" style="height: 350px;"></div> -->
-        </div>
+<body>
 
-        
-        <div class="sphone">
-            <ul class="list">
-                <li class="right"></li>
-                <li class="left"><img src="images/vi.jpg" alt=""><p>Hey Josefa</p></li>
-                <li class="left"><img src="images/vi.jpg" alt=""><p>女神节日快乐!</p></li>
-            </ul>
-            <div class="nav">
-                <img id="icon" src="images/jo.jpg" alt="">
-                <input type="text" id="info">
-                <button id="btn">发送</button>
-            </div>
-        </div>
-        <div class="footer">@SinETopia Presents.</div>
-    </div>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
 
-    <script type="text/javascript">
-        var bDiv = document.getElementById('box3');
-        bDiv.onclick = function() {
-            document.getElementById('box1').style.display = "block";
-            document.getElementById('box2').style.display = "none";
-            document.getElementById('box3').style.display = "none";
-            document.getElementById('pap').style.display = "block";
-        }
-        //ccc
-        var cc = document.getElementById("body");
-        function ccc() {
-            var a = parseInt(Math.random()*10);
-            var b = parseInt(Math.random()*10);
-            var c = parseInt(Math.random()*10);
-            var d = "#" + a + b + c;
-            body.style.background = d;
-        }
-        setInterval("ccc()", 2000);
-        
-        //snowfall
-         //add div
-        function addChild(top,snowShape) {
-            var div = document.createElement("div");
-            div.innerHTML = snowShape;
-            div.className = "flake";
-            div.style.position = 'absolute';
-            div.style.color = 'white';
-            div.style.opacity = 0.9;
-            div.style.left = parseInt(Math.random() * window.innerWidth) + 'px';
-            div.style.top = top + 'px';
-            div.style.fontSize = parseInt(Math.random() * 50) + 'px';
-            document.body.appendChild(div);
-        };
-        //snow fall auto
-        function autoWipe(snowSpeed,snowShape) {
-            var flake = document.getElementsByClassName('flake');
-            var timer = setInterval(function () {
-                for (var i = 0; i < flake.length; i++) {
-                    var opacity = flake[i].style.opacity;
-                    var offsetTop = Number((flake[i].style.top).replace('px', ''));
-                    if (offsetTop < window.innerHeight) {
-                        offsetTop = offsetTop + snowSpeed;
-                        opacity = opacity - 0.003;
-                        flake[i].style.top = offsetTop + 'px';
-                        flake[i].style.opacity = opacity;
-                    }else {
-                    document.body.removeChild(flake[i]);
-                    addChild(0, snowShape);
-                    }
-                }
-            }, 100);
-        };
-        //call above ways
-        function final(bigSnowParam,snowShape) {
-            for (var i = 0; i < bigSnowParam.snowNum; i++) {
-                addChild(parseInt(Math.random() * window.innerHeight),snowShape);
-            }
-            autoWipe(bigSnowParam.snowSpeed,snowShape);
-        };
-        //the last effect
-        function final(bigSnowParam,snowShape) {
-            for (var i = 0; i < bigSnowParam.snowNum; i++) {
-                addChild(parseInt(Math.random() * window.innerHeight),snowShape);
-            }
-            autoWipe(bigSnowParam.snowSpeed,snowShape);
-        };
-        //parameter value
-        //big snow pv
-        var bigSnowParam = {
-            snowNum:242,
-            snowSpeed:6
-        };
-        //mid snow pv
-        var midSnowParam = {
-            snowNum:242,
-            snowSpeed:3
-        };
-        //a little pv
-        var littleSnowParam = {
-            snowNum:242,
-            snowSpeed:1
-        };
-        //customize pv
-        var selfSnowParam = {
-            snowNum:'',//value is number
-            snowSpeed:''//value is number
-        };
-        //shape pv
-        var snowShapeObj = {
-            1:'精致！',
-            2:'❄',
-            3:'❅',
-            4:'✼',
-            5:'✼',
-            6:'❉',
-            7:'❇',
-            8:'❈',
-            9:'❊',
-            10:'✥',
-            11:'✺'
-        };
-        //call
-        final(bigSnowParam,snowShapeObj[1]);
+<div id="bg"></div>
+<div id="container"></div>
+<div id="fail">
+  <img src="images/static-cube.png">
+  <div id="upgradeText" class="bubble fadeTransition">
+	<div class="upgradetext">请用支持的硬件和最新版本的浏览器打开:</div>
+	<br>
+	<a class="upgradetext" href="https://www.google.com/chrome/browser/" target="_blank">Chrome</a><br>
+	<a class="upgradetext" href="https://www.mozilla.org/firefox" target="_blank">Firefox</a><br>
+	<a class="upgradetext" href="https://www.apple.com/safari" target="_blank">Safari</a><br>
+	<span class="pointerleft SPRITE_carrot_down_2x"></span>
+  </div>
+</div>
+<div id="uipanel" class="fadeTransition" style="display:none">
+  <div id="movecounter">0</div>
+  <div id="buttonpanel">
+	<div id="uibuttons">
+	  <div id="sharebutton" class="bubbleicon SPRITE_share_64_2x"></div>
+	  <div id="helpbutton" class="bubbleicon SPRITE_help_64_2x"></div>
+	  <div id="searchbutton" class="bubbleicon SPRITE_search_64_2x"></div>
+	</div>
+  </div>
+  <div id="helpbubble" class="bubble" style="display:none">
+	<span class="pointerup SPRITE_carrot_grey_up_2x"></span>
+	<div id="helpimage" class="one"></div>
+	<div id="helptext" class="helptext"></div>
+	<div id="helpnext" class="helptext"></div>
+	<span class="pointerdown SPRITE_carrot_down_2x"></span><br>
+  </div>
+</div>
+<script charset="utf-8" src="scripts/iecss3d.js"></script>
+<script charset="utf-8" src="scripts/ierenderer.js"></script>
+<script charset="utf-8" src="scripts/deviceMotion.js"></script>
+<script charset="utf-8" src="scripts/locked.js"></script>
+<!-- Certificate js -->
+<script charset="utf-8" src="scripts/textBox.js"></script>
+<script charset="utf-8" src="scripts/ResizeableTextBox.3.js"></script>
+<script charset="utf-8" src="scripts/divBox.js"></script>
+<script charset="utf-8" src="scripts/frames.js"></script>
+<script charset="utf-8" src="scripts/certificate.js"></script>
+<script charset="utf-8" src="scripts/main3.js"></script>
 
-        /*sphone*/
-        var icon = document.querySelector("#icon");
-        var iswho = true; 
-        var btn = document.querySelector("#btn");
-        var list = document.querySelector(".list");
-        var info = document.querySelector("#info");
-        var sphone = document.querySelector('.sphone');
-        var disp = document.querySelector("#pap");
-        var footer = document.querySelector(".footer");
-        var box = document.querySelector("#box");
-        var br2 = document.querySelector("#br2");
-
-
-        disp.onclick = function(){
-            sphone.style.display = 'block';
-            footer.style.display = 'none';
-            box.style.display = 'none';
-            disp.style.display = 'none';
-            br2.style.height = '650px';
-        }; 
-        icon.onclick = function(){
-            if(iswho){
-            icon.src = "images/vi.jpg";
-            }else{
-            icon.src = "images/jo.jpg";
-            }
-            iswho = !iswho;
-        };
-        btn.onclick = function(){
-            var val = info.value;
-            if(val == ""){
-                alert("不许发空格！");
-            } else {
-                if(iswho){
-                    list.innerHTML += '<li class="right"><img src="images/jo.jpg" alt=""><p>' + val + '</p></li>'; 
-                } else {
-                    list.innerHTML += '<li class="left"><img src="images/vi.jpg" alt=""><p>' + val + '</p></li>';
-                }
-            }
-        };
-    </script>
 </body>
 </html>
